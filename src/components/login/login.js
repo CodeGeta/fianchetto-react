@@ -48,82 +48,86 @@ class Login extends Component {
 
     render() {
         return (
-            <div className="container-fluid background">
-                <div className={"container"}>
+
+
+            <div className={"container"}>
+                {/*<div className="jumbotron">*/}
+                {/*    <h1 className="display-4">Sign In</h1>*/}
+                {/*</div>*/}
+
+                <h1 className="display-4 text-center">Sign In</h1>
                 <div className="row">
-                    <div className={"col"}/>
-                    <div className={"col"}>
-                        <h1 className="font-weight-bolder text-center text-white">Fianchetto</h1>
-                    </div>
-                    <div className={"col"}/>
-
-
-                </div>
-                <div className="row">
-                    <div className="col-sm-4"/>
-                    <div className="col-sm-4"/>
-                    <div className="col-sm-4 text-left">
-
-                        <form className="m-5">
-                            <div className="form-group row">
-                                <label htmlFor="username"
-                                       className="col-sm-3 col-form-label text-white">
-                                    Email
+                <div className="col-md-3  p-4"/>
+                <div className="col-md-6 border p-4">
+                    <form>
+                        <div className="form-group">
+                            <div className={"row"}>
+                                <label htmlFor="username" className="col-form-label">
+                                    Username
                                 </label>
-                                <div className="col-sm-9">
-                                    <input className="form-control wbdv-field wbdv-username bg-transparent text-white"
-                                           id="username"
-                                           placeholder="email"
-                                           onChange={this.handlEmailChange}/>
-                                </div>
                             </div>
+                            <div className="row">
+                                <input className="form-control "
+                                       id="username"
+                                       placeholder="email"
+                                       onChange={this.handlEmailChange}/>
+                            </div>
+                        </div>
 
-                            <div className="form-group row">
-                                <label htmlFor="password"
-                                       className="col-sm-3 col-form-label text-white">
+                        <div className="form-group">
+                            <div className={"row"}>
+                                <label htmlFor="password" className="col-form-label">
                                     Password </label>
-                                <div className="col-sm-9">
-                                    <input type="password" className="form-control bg-transparent text-white"
-                                           id="password" placeholder="password"
-                                           onChange={this.handlePasswordChange}/>
-                                </div>
                             </div>
+                            <div className={"row"}>
 
-                            <div className="form-group row">
-                                <label className="col-sm-3 col-form-label"/>
-                                <div className="col-sm-9">
-                                    <Link to={"/login"}>
-                                        <button onClick={this.submitLogin}
-                                                className="btn btn-primary btn-block wbdv-login">Sign
-                                            in
-                                        </button>
+                                <input type="password"
+                                       className="form-control bg-transparent text-white"
+                                       id="password"
+                                       placeholder="password"
+                                       onChange={this.handlePasswordChange}/>
+                            </div>
+                        </div>
+
+                        <div className="form-group">
+                            <div className={"row"}>
+                                <Link to={"/login"} className ="col-12 p-0 m-0">
+                                    <button onClick={this.submitLogin}
+                                            className="btn btn-dark btn-block ">
+                                        Sign in
+                                    </button>
+                                </Link>
+
+                                {/*<button className="btn btn-primary btn-block">Sign in</button>*/}
+                            </div>
+                            <div className="row">
+                                <div className="col-6 m-0 p-0">
+                                    <a href="#" className="">Forgot Password?</a>
+                                </div>
+                                <div className="col-6">
+                                    <Link to={"/register"}
+                                          className="float-right">
+                                            Sign up
                                     </Link>
-                                    <div className="row">
-
-                                    </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div className="form-group row">
-                                <div className={"col-sm-2"}/>
-                                <div className={"col-sm-10"}>
-                                    <div className="text-center">
-                                        <Link to={"/register"}>
-                                            <a className="">
-                                                Sign up</a>
-                                        </Link>
-                                    </div>
-                                </div>
+                        <div className = "row">
+                            <div className={"col"}/>
+                            <div className={"col text-center"}>
+                                <Link to={"/privacy-policy"}>
+                                    Privacy Policy
+                                </Link>
                             </div>
+                            <div className={"col"}/>
+                        </div>
 
-                        </form>
-                    </div>
+                    </form>
+                    
+
                 </div>
-                <div className = "privacy-policy">
-                    <Link to={"/privacy-policy"}>
-                        Privacy Policy
-                    </Link>
-                </div>
+                <div className="col-md-3  p-4"/>
                 </div>
             </div>
         )

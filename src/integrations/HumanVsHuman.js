@@ -9,9 +9,9 @@ const game = new Chess();
 let socket = null;
 
 class HumanVsHuman extends Component {
-    constructor(props){
-        super(props);
-    }
+    // constructor(props){
+    //     super(props);
+    // }
 
     static propTypes = {children: PropTypes.func};
 

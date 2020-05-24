@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link, Redirect} from "react-router-dom";
+import {Route, Redirect} from "react-router-dom";
 import PairingTableView from "../components/tournamentDashboard/PairingTable/pairingTableView";
 import PairingHeader from "../components/tournamentDashboard/PairingTable/headerP";
 

@@ -27,9 +27,14 @@
     position: fixed;
     top: 0;
     left: 0
+}
 
+.background_login {
+    background-image: url("./../../images/2.jpg");
 
 }
+
+
 
 .privacy-policy {
     position: absolute; bottom: 15px; left: 0; width: 100%; text-align: center
