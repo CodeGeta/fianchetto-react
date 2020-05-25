@@ -46,87 +46,106 @@ class Register extends Component {
 
     render() {
         return (
-            <div className="background">
-                <div className=""><h1
-                    className="font-weight-bolder text-center text-white">Fianchetto</h1></div>
-                <h1 className={"text-center"}>Sign Up</h1>
+            <div className="container">
                 <div className="row">
-                    <div className="col-sm-4"/>
-                    <div className="col-sm-4"/>
-                    <div className="col-sm-4 text-left">
-
+                    <h1 className={"col display-4 text-center"}>Sign Up</h1>
+                </div>
+                <div className="row">
+                    <div className="col-sm-2"/>
+                    <div className="col-sm-8 border p-4">
                         <form>
-                            <div className="form-group row">
-                                <label htmlFor="Name"
-                                       className="col-sm-2 col-form-label text-white">
-                                    Name
-                                </label>
-                                <div className="col-sm-9">
-                                    <input className="form-control "
-                                           id="name"
-                                           onChange={this.handleUsernameChange}
-                                            placeholder="Name"/>
+                            <div className="form-group">
+                                <div className={"row"}>
+                                    <div className="col">
+                                        <label htmlFor="Name"
+                                               className="col-form-label">
+                                            Name
+                                        </label>
+                                    </div>
+                                </div>
+                                <div className={"row"}>
+                                    <div className="col">
+                                        <input className="form-control "
+                                               id="name"
+                                               onChange={this.handleUsernameChange}
+                                                placeholder="Name"/>
+                                    </div>
                                 </div>
 
 
                             </div>
 
-                            <div className="form-group row">
-                                <label htmlFor="username"
-                                       className="col-sm-2 col-form-label text-white">
-                                    Email
-                                </label>
-                                <div className="col-sm-9">
-                                    <input className="form-control "
-                                           id="email"
-                                           onChange={this.handlEmailChange}
-                                           placeholder="Email"/>
+                            <div className="form-group">
+                                <div className={"row"}>
+                                    <div className="col">
+                                        <label htmlFor="username"
+                                               className="col-form-label">
+                                            Email
+                                        </label>
+                                    </div>
+                                </div>
+                                <div className={"row"}>
+                                    <div className="col">
+                                        <input className="form-control "
+                                               id="email"
+                                               onChange={this.handlEmailChange}
+                                               placeholder="Email"/>
+                                    </div>
                                 </div>
 
                             </div>
 
-                            <div className="form-group row">
-                                <label htmlFor="username"
-                                       className="col-sm-2 col-form-label text-white">
-                                    Confirm Email
-                                </label>
-                                <div className="col-sm-9">
-                                    <input className="form-control  "
-                                           id="username"
-                                           placeholder="Confirm Email"/>
+                            <div className="form-group">
+                                <div className="row">
+                                    <div className={"col"}>
+                                        <label htmlFor="username"
+                                               className="col-form-label">
+                                            Confirm Email
+                                        </label>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className={"col"}>
+                                        <input className="form-control"
+                                               id="username"
+                                               placeholder="Confirm Email"/>
+                                    </div>
                                 </div>
 
 
                             </div>
 
-                            <div className="form-group row">
-                                <label htmlFor="password"
-                                       className="col-sm-2 col-form-label text-white">
-                                    Password </label>
-                                <div className="col-sm-9">
-                                    <input type="password"
-                                           className="form-control  wbdv-field wbdv-password"
-                                           id="password"
-                                           onChange={this.handlePasswordChange}
-                                           placeholder="password"/>
+                            <div className="form-group">
+                                <div className="row">
+                                    <div className="col">
+                                        <label htmlFor="password"
+                                               className="col-form-label ">
+                                            Password </label>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col">
+                                        <input type="password"
+                                               className="form-control "
+                                               id="password"
+                                               onChange={this.handlePasswordChange}
+                                               placeholder="password"/>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className="form-group row">
-                                <label className="col-sm-2 col-form-label text-white"/>
-                                <div className="col-sm-9">
-
-                                    <button className="btn btn-primary btn-block wbdv-login"
-                                            onClick={(e) => this.submitNewUser(e)}>Register
-                                    </button>
-
+                            <div className="form-group">
+                                <div className={"row"}>
+                                    <div className="col">
+                                        <button className="btn btn-dark btn-block "
+                                                onClick={(e) => this.submitNewUser(e)}>Register
+                                        </button>
+                                    </div>
                                 </div>
-                                <div className="col-sm-1"/>
                             </div>
-                            <div className="form-group row">
-                                <div className={"col-sm-2"}/>
-                                <div className={"col-sm-10"}>
-                                    <div className="text-center">
+                            <div className="form-group">
+                                <div className={"row"}>
+                                    <div className="col text-center">
                                         <Link to={"/login"}>
                                             <a className="">
                                                 Login </a>
@@ -135,13 +154,17 @@ class Register extends Component {
                                 </div>
                             </div>
                         </form>
+
+                        <div className = "row">
+                            <div className={"col text-center"}>
+                                <Link to={"/privacy-policy"}>
+                                    Privacy Policy
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className = "privacy-policy">
-                    <Link to={"/privacy-policy"}>
-                        Privacy Policy
-                    </Link>
-                </div>
+
             </div>
         )
 

@@ -1,8 +1,6 @@
 import React from 'react';
 import {Route} from "react-router-dom";
-
 import HeaderTournamentDashboard from "../components/tournamentDashboard/header";
-import PairingTableView from "../components/tournamentDashboard/PairingTable/pairingTableView";
 import TournamentInfo from "../components/tournamentDashboard/TournamentInfo/tournamentInfo";
 import PairingContainer from "./PairingContainer";
 import FianchettoChessboard from "../components/chessboard/chessboard";
