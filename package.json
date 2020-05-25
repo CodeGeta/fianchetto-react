@@ -6,6 +6,7 @@
     "bootstrap": "^4.4.1",
     "chess.js": "0.10.2",
     "chessboardjsx": "1.0.9",
+    "edmonds-blossom": "^1.0.0",
     "history": "latest",
     "particles-bg": "^2.4.7",
     "react": "^16.4.0",
@@ -21,8 +22,7 @@
     "socket.io": "^2.3.0",
     "socket.io-client": "1.7.0",
     "sweetalert2": "^9.10.12",
-    "sweetalert2-react-content": "^3.0.1",
-    "edmonds-blossom": "latest"
+    "sweetalert2-react-content": "^3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
