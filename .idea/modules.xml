@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/fianchetto-chess-tournament-manager.iml" filepath="$PROJECT_DIR$/.idea/fianchetto-chess-tournament-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fianchetto-chess-tournament-manager.iml" filepath="$PROJECT_DIR$/fianchetto-chess-tournament-manager.iml" />
     </modules>
   </component>
 </project>

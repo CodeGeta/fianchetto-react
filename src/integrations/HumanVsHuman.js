@@ -5,13 +5,11 @@ import openSocket from 'socket.io-client';
 import {NODE_SERVER} from "../constants/endpoints";
 
 const game = new Chess();
-// const socket = openSocket(NODE_SERVER);
+
 let socket = null;
 
 class HumanVsHuman extends Component {
-    // constructor(props){
-    //     super(props);
-    // }
+
 
     static propTypes = {children: PropTypes.func};
 

@@ -3,8 +3,8 @@ import {connect} from "react-redux";
 import {findTournamentsForUser} from "../../actions/userActions"
 import GridItem from "./gridItem";
 import tournamentService from "../../services/tournamentService";
-// import {Redirect} from "react-router";
-import {BrowserRouter as Router, Redirect } from 'react-router-dom';
+import {Redirect} from "react-router";
+// import {BrowserRouter as Router, Redirect } from 'react-router-dom';
 class PlayerActivity extends React.Component {
 
     constructor(props){

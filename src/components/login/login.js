@@ -102,7 +102,7 @@ class Login extends Component {
                                 </div>
                                 <div className="row">
                                     <div className="col-6 m-0 p-0">
-                                        <a href="#" className="">Forgot Password?</a>
+                                        <Link to={"/"}>Forgot Password?</Link>
                                     </div>
                                     <div className="col-6">
                                         <Link to={"/register"}

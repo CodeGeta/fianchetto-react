@@ -9,7 +9,6 @@ export class HomePageComponent extends React.Component {
         super(props)
         this.state = {
             tournaments: [],
-            
         }
     }
 

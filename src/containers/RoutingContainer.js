@@ -28,7 +28,6 @@ class RoutingContainer extends React.Component
     {
         return(
             <div className={"container-fluid m-0 p-0"}>
-
                 <Router history={this.props.history}>
                     <Provider store={store}>
                         <Route
@@ -36,7 +35,6 @@ class RoutingContainer extends React.Component
                             render = {
                                 () =>
                                     <HomePageComponent/>
-
                             }
                         />
 
@@ -45,42 +43,41 @@ class RoutingContainer extends React.Component
                         render = {
                             () =>
                                 <Login {...this.props} />
-
                         }
                     />
 
-                        <Route
-                            exact path = "/register"
-                            render = {
-                                (props) =>
-                                    <div>
-                                        <Register
-                                            {...props}/>
-                                    </div>
-                            }
-                        />
+                    <Route
+                        exact path = "/register"
+                        render = {
+                            (props) =>
+                                <div>
+                                    <Register
+                                        {...props}/>
+                                </div>
+                        }
+                    />
 
 
-                        <Route
-                            path = "/user/:userid/"
-                            render = {
-                                (props) =>
-                                    <div>
-                                        <UserContainer
-                                            {...props}/>
-                                    </div>
-                            }
-                        />
-                        <Route
-                            path = "/privacy-policy"
-                            render = {
-                                (props) =>
-                                    <div>
-                                        <PrivacyPolicy
-                                            {...props}/>
-                                    </div>
-                            }
-                        />
+                    <Route
+                        path = "/user/:userid/"
+                        render = {
+                            (props) =>
+                                <div>
+                                    <UserContainer
+                                        {...props}/>
+                                </div>
+                        }
+                    />
+                    <Route
+                        path = "/privacy-policy"
+                        render = {
+                            (props) =>
+                                <div>
+                                    <PrivacyPolicy
+                                        {...props}/>
+                                </div>
+                        }
+                    />
 
                 </Provider>
                 </Router>

@@ -8,7 +8,6 @@ import {
     createMatchesForRound,
     createRoundService, findAllMatchesForTournamentService, findAllParticipantForTournamentService,
     findAllRoundsForTournamnetService,
-    findAllRoundsService,
     updateRoundService
 } from "../services/roundService";
 import {
@@ -30,8 +29,8 @@ const stateToPropertyMapper = (state) => {
 const generateJsonTuple = (tuple) => {
 
     let val = {
-        "home" : {"id" : parseInt(tuple.home)},
-        "away" : {"id" : parseInt(tuple.away)}
+        "home" : {"id" : parseInt(tuple.home, 10)},
+        "away" : {"id" : parseInt(tuple.away, 10)}
     }
     return val
 }
@@ -126,7 +125,7 @@ class PairingContainer extends React.Component
 
     render()
     {
-        if (this.props.userId == -1) {
+        if (this.props.userId === -1) {
             return (
                 <Redirect to={'/'}/>
             )
