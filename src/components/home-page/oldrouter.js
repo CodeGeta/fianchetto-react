@@ -4,14 +4,14 @@ import React from 'react';
 import {BrowserRouter as Router, Route } from 'react-router-dom';
 import {createStore, combineReducers} from 'redux'
 import {Provider} from 'react-redux'
-import userReducer from "../reducers/userReducer"
-import tournamentReducer from "../reducers/tournamentReducer"
-import roundReducer from "../reducers/roundReducer";
-import {HomePageComponent} from "../components/home-page/homePage";
-import Login from "../components/login/login";
-import Register from "../components/register/register";
-import UserContainer from "./UserContainer";
-import PrivacyPolicy from "../components/privacy-policy/privacy-policy";
+import userReducer from "../../reducers/userReducer"
+import tournamentReducer from "../../reducers/tournamentReducer"
+import roundReducer from "../../reducers/roundReducer";
+import {TournamentCardsComponent} from "./homepage";
+import Login from "../login/login";
+import Register from "../register/register";
+import UserContainer from "../../containers/UserContainer";
+import PrivacyPolicy from "../privacy-policy/privacy-policy";
 
 const rootReducer = combineReducers({
     userReducer: userReducer,
@@ -22,7 +22,7 @@ const rootReducer = combineReducers({
 const store = createStore(rootReducer);
 
 
-class RoutingContainer extends React.Component
+class OldRouterComponent extends React.Component
 {
     render()
     {
@@ -30,13 +30,13 @@ class RoutingContainer extends React.Component
             <div className={"container-fluid m-0 p-0"}>
                 <Router history={this.props.history}>
                     <Provider store={store}>
-                        <Route
-                            exact path = "/"
-                            render = {
-                                () =>
-                                    <HomePageComponent/>
-                            }
-                        />
+
+                    <Route
+                        exact path = "/"
+                        render = {
+                            () => <TournamentCardsComponent/>
+                        }
+                    />
 
                     <Route
                         exact path = "/login"
@@ -89,5 +89,5 @@ class RoutingContainer extends React.Component
 }
 
 
-export default RoutingContainer
+export default OldRouterComponent
 

@@ -12,25 +12,37 @@ export class HomePageComponent extends React.Component {
         }
     }
 
-    componentDidMount(): void {
+    componentDidMount() {
         findAllTournaments()
             .then(tournaments => {
-                this.setState({
-                    tournaments: tournaments
-                })
+                this.setState({tournaments: tournaments})
             })
     }
+
     render(){
         return(
             <div className={"top-image-2"}>
 
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-                    <Link className="navbar-brand wbdv-course-title" to={`/`}>Fianchetto</Link>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <Link className="navbar-brand wbdv-course-title"
+                          to={`/`}>
+                        Fianchetto
+                    </Link>
+
+                    <button className="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarNav"
+                            aria-controls="navbarNav"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"/>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
+
+
+                    <div className="collapse navbar-collapse"
+                         id="navbarNav">
 
                         <div className="text-white ml-auto row">
                             <div className={"col-lg"}>
@@ -49,12 +61,19 @@ export class HomePageComponent extends React.Component {
                 </nav>
 
                 <div className={'jumbotron'}>
-                    <h1 className={'text-center text-top'} style={{fontSize: "48px"}}>FIANCHETTO</h1>
+                    <h1 className={'text-center text-top'}
+                        style={{fontSize: "48px"}}>
+                        FIANCHETTO
+                    </h1>
                 </div>
 
                 <div className={''}>
-                <h2 className={"text-center"} style={{color: "#5D6D7E"}}>ACTIVE TOURNAMENTS</h2>
-                <div className="border-top my-3"/>
+                    <h2 className={"text-center"}
+                        style={{color: "#5D6D7E"}}>
+                        ACTIVE TOURNAMENTS
+                    </h2>
+                    <div className="border-top my-3"/>
+
                     <div className={"container col-9"}>
                         <div className={"row"}>
                             {
@@ -79,6 +98,7 @@ export class HomePageComponent extends React.Component {
                             }
                         </div>
                     </div>
+
                     <nav className="navbar bottom navbar-light bg-light ">
                         <div className={"col"}/>
                         <div className={"col text-center text-black"}>

@@ -1,12 +1,12 @@
 import React from 'react';
-import RoutingContainer from "./containers/RoutingContainer";
 import {createBrowserHistory} from "history";
+import RoutingComponent from "./components/routing/routing";
 
 const history = createBrowserHistory();
 
 function App() {
   return (
-      <RoutingContainer history = {history}/>
+      <RoutingComponent history = {history}/>
   );
 }
 

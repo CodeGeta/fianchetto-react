@@ -10,10 +10,10 @@ import MyMatches from "../components/tournamentDashboard/MyMatches/MyMatches";
 class TournamentContainer extends React.Component
 {
 
-    componentDidMount(): void {
+    componentDidMount() {
         this.props.hideUserHeader()
     }
-    componentWillUnmount(): void {
+    componentWillUnmount() {
         this.props.hideUserHeader()
     }
 
